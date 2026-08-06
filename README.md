@@ -1,12 +1,15 @@
 # memento-plugins
 
 A Claude Code plugin marketplace for the [memento.engineering](https://github.com/memento-engineering)
-toolchain.
+toolchain — and the map for consuming the same assets from GitHub Copilot.
 
 ```
 /plugin marketplace add memento-engineering/claude-plugins
 /plugin install leonard@memento-plugins
 ```
+
+Not a Claude Code user? See [Using with GitHub Copilot](#using-with-github-copilot)
+below — same assets, no copies.
 
 ## What's in it
 
@@ -59,6 +62,47 @@ Two consequences worth knowing:
   path fails validation with `plugins.N.agents: Invalid input`. Every agent must
   be listed explicitly, so vendoring one also means adding a line here. (The
   agent's name comes from its `name:` frontmatter, not its filename.)
+
+## Using with GitHub Copilot
+
+Copilot has no marketplace manifest to point at, but it consumes the **same
+vendored files** through its own channels — so this catalog's single-source
+rule holds: nothing is copied here, and each route below reads the asset tree
+in the source repo.
+
+**Skills.** Copilot supports the Agent Skills standard (the same `SKILL.md`
+files Claude Code loads), and the GitHub CLI (v2.90+) installs them straight
+from the source repo:
+
+```sh
+gh skill install memento-engineering/lenny drive-with-leonard               # project → .agents/skills/
+gh skill install memento-engineering/lenny drive-with-leonard --scope user  # everywhere
+```
+
+Discovery follows the `skills/*/SKILL.md` convention, so only the vendored
+consumer surface is installable — the repo-internal development skills sit in
+hidden directories `gh skill` excludes by default. Project-scope installs land
+in `.agents/skills/`, which Copilot, Cursor, Codex, and friends all read
+natively.
+
+**Agents.** Copilot custom agents are the same markdown-plus-frontmatter
+shape, read from `.github/agents/` (Copilot CLI, coding agent, and VS Code).
+The vended agent files carry both tool vocabularies — each product ignores
+names it doesn't recognize — so the same file works unchanged. For a repo that
+depends on `leonard_cli`, the installer lays out every harness at once:
+
+```sh
+dart run leonard_cli:install --copilot   # .agents/ canon + .github/agents/ links
+dart run leonard_cli:install --all       # + .claude/ overlay for Claude Code
+```
+
+Without a Dart dependency, copy the file directly:
+
+```sh
+mkdir -p .github/agents && curl -fsSL \
+  https://raw.githubusercontent.com/memento-engineering/lenny/main/packages/leonard_cli/lib/assets/agents/leonard-drive.agent.md \
+  -o .github/agents/leonard-drive.agent.md
+```
 
 ## Versioning
 
