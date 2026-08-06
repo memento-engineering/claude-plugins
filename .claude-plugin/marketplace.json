@@ -11,14 +11,15 @@
       "displayName": "Leonard",
       "description": "Drive and test a running Flutter app with an LLM over the Dart VM service — observe a settled, structured snapshot, act with tools, work toward a goal.",
       "source": {
-        "source": "github",
-        "repo": "memento-engineering/lenny"
+        "source": "git-subdir",
+        "url": "https://github.com/memento-engineering/lenny.git",
+        "path": "packages/leonard_cli/lib/assets"
       },
       "strict": false,
-      "skills": ["./packages/leonard_cli/lib/assets/skills/"],
+      "skills": ["./skills/"],
       "agents": [
-        "./packages/leonard_cli/lib/assets/agents/leonard-driver.agent.md",
-        "./packages/leonard_cli/lib/assets/agents/leonard-pilot.agent.md"
+        "./agents/leonard-driver.agent.md",
+        "./agents/leonard-pilot.agent.md"
       ],
       "homepage": "https://github.com/memento-engineering/lenny",
       "repository": "https://github.com/memento-engineering/lenny",
