@@ -17,10 +17,7 @@
       },
       "strict": false,
       "skills": ["./skills/"],
-      "agents": [
-        "./agents/leonard-driver.agent.md",
-        "./agents/leonard-pilot.agent.md"
-      ],
+      "agents": ["./agents/leonard-drive.agent.md"],
       "homepage": "https://github.com/memento-engineering/lenny",
       "repository": "https://github.com/memento-engineering/lenny",
       "license": "MIT",
