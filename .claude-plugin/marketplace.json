@@ -1,0 +1,34 @@
+{
+  "name": "memento-plugins",
+  "description": "Claude Code plugins for the memento.engineering toolchain.",
+  "owner": {
+    "name": "memento.engineering",
+    "url": "https://github.com/memento-engineering"
+  },
+  "plugins": [
+    {
+      "name": "leonard",
+      "displayName": "Leonard",
+      "description": "Drive and test a running Flutter app with an LLM over the Dart VM service — observe a settled, structured snapshot, act with tools, work toward a goal.",
+      "source": {
+        "source": "github",
+        "repo": "memento-engineering/lenny"
+      },
+      "strict": false,
+      "skills": ["./packages/leonard_cli/lib/assets/skills/"],
+      "agents": [
+        "./packages/leonard_cli/lib/assets/agents/leonard-driver.agent.md",
+        "./packages/leonard_cli/lib/assets/agents/leonard-pilot.agent.md"
+      ],
+      "homepage": "https://github.com/memento-engineering/lenny",
+      "repository": "https://github.com/memento-engineering/lenny",
+      "license": "MIT",
+      "category": "testing",
+      "tags": ["flutter", "dart", "testing", "ui-automation", "vm-service"],
+      "author": {
+        "name": "memento.engineering",
+        "url": "https://github.com/memento-engineering"
+      }
+    }
+  ]
+}
