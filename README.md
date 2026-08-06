@@ -12,7 +12,12 @@ toolchain.
 
 | Plugin | Source repo | What you get |
 | --- | --- | --- |
-| `leonard` | [`lenny`](https://github.com/memento-engineering/lenny) | The `drive-with-leonard` skill plus the `leonard-driver` and `leonard-pilot` agents — drive a running Flutter app (or any Dart-VM target with a Leonard extension) with an LLM over the VM service. |
+| `leonard` | [`lenny`](https://github.com/memento-engineering/lenny) | Drive and test a running Flutter app — or any Dart-VM target with a Leonard extension — with an LLM over the VM service. |
+
+Deliberately not enumerated: the exact skills and agents each plugin carries.
+That list lives in the source repo and changes there; repeating it here creates a
+second copy to keep in sync, which is the failure this catalog is built to avoid.
+Run `/plugin` after installing to see what a plugin actually exposes.
 
 ## How this catalog is built
 
