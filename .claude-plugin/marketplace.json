@@ -9,20 +9,59 @@
     {
       "name": "leonard",
       "displayName": "Leonard",
-      "description": "Drive and test a running Flutter app with an LLM over the Dart VM service — observe a settled, structured snapshot, act with tools, work toward a goal.",
+      "description": "Drive and test a running Flutter app with an LLM over the Dart VM service \u2014 observe a settled, structured snapshot, act with tools, work toward a goal.",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/memento-engineering/lenny.git",
         "path": "packages/leonard_cli/lib/assets"
       },
       "strict": false,
-      "skills": ["./skills/"],
-      "agents": ["./agents/leonard-drive.agent.md"],
+      "skills": [
+        "./skills/"
+      ],
+      "agents": [
+        "./agents/leonard-drive.agent.md"
+      ],
       "homepage": "https://github.com/memento-engineering/lenny",
       "repository": "https://github.com/memento-engineering/lenny",
       "license": "MIT",
       "category": "testing",
-      "tags": ["flutter", "dart", "testing", "ui-automation", "vm-service"],
+      "tags": [
+        "flutter",
+        "dart",
+        "testing",
+        "ui-automation",
+        "vm-service"
+      ],
+      "author": {
+        "name": "memento.engineering",
+        "url": "https://github.com/memento-engineering"
+      }
+    },
+    {
+      "name": "memento",
+      "displayName": "memento.engineering",
+      "description": "The organization's working skills: filing buildable beads (filing-beads), and more as they are written.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/memento-engineering/memento-engineering.git",
+        "path": "skills"
+      },
+      "strict": false,
+      "skills": [
+        "./"
+      ],
+      "homepage": "https://github.com/memento-engineering/memento-engineering",
+      "repository": "https://github.com/memento-engineering/memento-engineering",
+      "license": "MIT",
+      "category": "productivity",
+      "tags": [
+        "beads",
+        "bd",
+        "grid",
+        "planning",
+        "decisions"
+      ],
       "author": {
         "name": "memento.engineering",
         "url": "https://github.com/memento-engineering"
