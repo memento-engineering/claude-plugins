@@ -27,6 +27,27 @@
         "name": "memento.engineering",
         "url": "https://github.com/memento-engineering"
       }
+    },
+    {
+      "name": "memento",
+      "displayName": "memento.engineering",
+      "description": "The organization's working skills: filing buildable beads (filing-beads), and more as they are written.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/memento-engineering/memento-engineering.git",
+        "path": "skills"
+      },
+      "strict": false,
+      "skills": ["./"],
+      "homepage": "https://github.com/memento-engineering/memento-engineering",
+      "repository": "https://github.com/memento-engineering/memento-engineering",
+      "license": "MIT",
+      "category": "productivity",
+      "tags": ["beads", "bd", "grid", "planning", "decisions"],
+      "author": {
+        "name": "memento.engineering",
+        "url": "https://github.com/memento-engineering"
+      }
     }
   ]
 }

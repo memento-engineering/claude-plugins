@@ -6,6 +6,7 @@ toolchain — and the map for consuming the same assets from GitHub Copilot.
 ```
 /plugin marketplace add memento-engineering/claude-plugins
 /plugin install leonard@memento-plugins
+/plugin install memento@memento-plugins
 ```
 
 Not a Claude Code user? See [Using with GitHub Copilot](#using-with-github-copilot)
@@ -16,6 +17,7 @@ below — same assets, no copies.
 | Plugin | Source repo | What you get |
 | --- | --- | --- |
 | `leonard` | [`lenny`](https://github.com/memento-engineering/lenny) | Drive and test a running Flutter app — or any Dart-VM target with a Leonard extension — with an LLM over the VM service. |
+| `memento` | [`memento-engineering`](https://github.com/memento-engineering/memento-engineering) | The organization's working skills, starting with `filing-beads`: file and refine beads an agent can build on first read. |
 
 Deliberately not enumerated: the exact skills and agents each plugin carries.
 That list lives in the source repo and changes there; repeating it here creates a
